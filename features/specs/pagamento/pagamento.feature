@@ -15,7 +15,6 @@ Contexto: Fechar pedido
             | opcao_pagamento         | info_meio_de_pagamento                |
             | cartao de crédito       | informar dados do cartão              |
             | boleto                  | imprimir/salvar boleto                |
-            | ame                     | inserir dados cartao e usar app ame   |
             | pagar na loja           | selecionar forma de pagamento na loja |
             | pix                     | ler qr code e efetuar pagamento       |
 
@@ -36,6 +35,27 @@ Contexto: Fechar pedido
             | cartão vencido                     | o cartão está vencido             |
             | código de segurança inválido       | código de segurança inválido      |
             | número de parcelas não selecionado | selecione o número de parcelas    |
+
+    Cenário: Pagamento com boleto
+        Dado que tenha sido selecionada a forma de pagamento boleto
+        E o usuário confirmou a compra
+        Então deverá ser exibido o boleto 
+    
+    Cenário: Pagamento com PIX
+        Dado que tenha sido selecionada a forma de pagamento PIX
+        E foi exibido o QR CODE para leitura do usuário
+        E usuário leu o mesmo e efetuou o pagamento
+        Então deverá ser confirmada a compra
+    
+    Cenário: Pagamento na Loja
+        Dado que tenha sido selecionada a opção de pagamento na Loja
+        E o usuário escolheu a loja que deseja efetuar o pagamento
+        Então deverá ser concluída a compra
+
+
+
+    
+
 
 
 

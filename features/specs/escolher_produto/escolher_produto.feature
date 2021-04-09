@@ -1,6 +1,6 @@
 #language: pt 
  
-Funcionalidade: Escolher produto para compra
+Funcionalidade: Produto
    Contexto: Abrir produto 
 
     Esquema do Cenário: Selecionar Departamento
